@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+
+/*COULEURS 
+BLEU : #0065FC;
+BLEU CLAIR : #DEEBFF;
+GRIS : #F2F2F2;
+*/
+
+body{
+    font-family: 'Raleway', sans-serif;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.pad2{
+    padding-left: 3%;
+    padding-right: 3%;
+}
+.container{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+header{
+    margin-bottom: 10px;
+}
+
+.header__container{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
+.header__container .logo{
+    width: 100px;
+}
+.header__container h3{
+    color:#0065FC;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.menu__item{
+    width: 50%;
+    padding: 10px 0; 
+    border-bottom: 3px solid #F2F2F2;
+}
+.menu__item a{
+    display: block;
+    color: black;
+}
+.menu__item:hover {
+    border-bottom: 3px solid #0065FC;
+    color:#0065FC;
+}
+.recherche-title{
+    font-size: 1.5rem;
+}
+.description-title{
+    font-size: 0.9rem;
+}
+
+.search-inner{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.search-inner .fa-map-marker-alt{
+    padding: 15px 20px;
+    background-color: #f2f2f2;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-right: -5px;
+}
+
+.search-inner .fa-search{
+    padding: 15px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    margin-left: -5px;
+    color: white;
+    background-color: #0065FC;
+    display: none;
+}
+
+.search-inner .search-typing{
+    padding: 10px;
+    border: 1px solid #f2f2f2;
+    color: black;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+}
+.search-inner .search-btn{
+    padding: 10px 20px;
+    color: white;
+    background-color: #0065FC;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    margin-left: -5px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+}
+
+.filtres-inner{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.filtre-title{
+    margin-right: 50px;
+}
+.filtre-item{
+    margin-right: 50px;
+    position: relative;
+}
+
+.filtre-item i{
+    padding: 1rem;
+    line-height: 1rem;
+    font-size: 1rem;
+    background-color: #DEEBFF;
+    border-radius: 50%;
+    position: absolute;
+    color:#0065FC;
+    left: -5px;
+}
+.filtre-item button{
+    padding: 11px;
+    border-radius: 20px;
+    border: none;
+    background-color: white;
+    padding-left: 52px;
+    border: 1px solid grey;
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+}
+.filtre-item button:hover{
+    background-color: #0065FC;
+}
+.info-container{
+    display: flex;
+    align-items: center;
+    margin-top:25px;
+}
+.info-container p {
+    font-size: 0.9rem;
+}
+.fa-info{
+    color: #0065FC;
+    border: 1px solid #f2f2f2;
+    border-radius: 50%;
+    line-height: 10px;
+    padding: 10px;
+    font-size: 10px;
+    margin-right: 10px;
+}
+
+/*PARTIE FOOTER */
+footer{
+    background-color: #F2F2F2;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+.footer-item{
+    margin-right: 280px;
+}
+.footer-item h2{
+    margin-top: 10px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.footer-item h3{
+    font-weight: 400;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 450px){
+    .filtre-title{
+        margin-right: 300px;
+        margin-bottom: 15px;
+    }
+    .filtre-item button{
+        margin-bottom: 15px;
+    }
+    .info-container{
+        align-items: flex-start;
+        margin-top: 0;
+    }
+    .footer-item{
+        width: 100%;
+        margin-right: 0;
+    }
+    .search-inner .fa-search{
+        display:block;
+    }
+    .search-inner .search-btn{
+        display: none;
+}
