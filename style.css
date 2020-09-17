@@ -268,8 +268,6 @@ header{
     object-fit: cover;
 }
 
- 
-
 .aside{
     width: 37%;
     background-color: #f2f2f2;
@@ -326,6 +324,87 @@ header{
     padding: 5px 10px;
     width: 65%;
 }
+
+/* PARTIE ACTIVITE */
+.activite-container{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.activite-items{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+.activite-item{
+    width: 22.5%;
+    height: 420px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(88, 88, 88, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.no-shadow{
+    box-shadow: none;
+    overflow: visible;
+}
+.activite-item__bis{
+    box-shadow: 0px 0px 5px rgba(88, 88, 88, 0.2);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.activite-image{
+    width: 100%;
+    height: 380px;
+}
+.pomegue-image{
+    width: 100%;
+    height: 160px;
+}
+
+.frioul-image{
+    width: 100%;
+    height: 110px;
+}
+
+.dame-image{
+    width: 100%;
+    height: 140px;
+}
+
+.longchamp-image{
+    width: 100%;
+    height: 140px;
+}
+.pomegue-image img, .frioul-image img, .dame-image img, .longchamp-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.activite-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.activite-description{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+.activite-description p{
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
 
 /*PARTIE FOOTER */
 footer{
@@ -465,6 +544,21 @@ footer{
         padding:0;
         margin-top: 20px;
         height: 150px;
+    }
+    .activite-item{
+        width: 100%;
+        margin-top: 20px;
+        height: auto;
+    }
+    .activite-image, .pomegue-image, .frioul-image, .dame-image, .longchamp-image{
+        width: 100%;
+        height: 150px;
+    }
+    .mg20{
+        margin-top: 20px;
+    }
+    .activite-title{
+        font-size: 1.4rem;
     }
 
 }
