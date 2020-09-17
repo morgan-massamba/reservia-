@@ -560,5 +560,8 @@ footer{
     .activite-title{
         font-size: 1.4rem;
     }
+    .activite-container{
+        padding: 30px;
+    }
 
 }
