@@ -22,50 +22,56 @@ body{
     box-sizing: border-box;
 }
 .pad2{
-    padding-left: 3%;
-    padding-right: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
-.container{
-    padding-top: 2%;
-    padding-bottom: 2%;
-}
+
 header{
     margin-bottom: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .header__container{
     display: flex;
-    justify-content: space-between;
-    text-align: center;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
 }
 
 .header__container .logo{
     width: 100px;
+    padding: 14px 0;
+}
+.header-logo{
+    width: 70%;
+}
+
+.menu__item{
+    padding: 28px 0; 
+    border-top: 3px solid #F2F2F2;
+    text-align: center;
 }
 .header__container h3{
     color:#0065FC;
-}
-
-.menu{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 20px;
-}
-.menu__item{
-    width: 50%;
-    padding: 10px 0; 
-    border-bottom: 3px solid #F2F2F2;
+    cursor: pointer;
+    border-color: transparent;
 }
 .menu__item a{
     display: block;
     color: black;
 }
 .menu__item:hover {
-    border-bottom: 3px solid #0065FC;
+    border-top: 3px solid #0065FC;
     color:#0065FC;
 }
+.menu__item.menu__item.item-inscription:hover {
+    border-color: transparent;
+}
+.menu__item:hover a{
+    color:#0065FC;
+}
+
 .recherche-title{
     font-size: 1.5rem;
 }
@@ -114,6 +120,7 @@ header{
     font-weight: 600;
     font-family: 'Raleway', sans-serif;
     margin-left: -5px;
+    cursor: pointer;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -139,6 +146,7 @@ header{
 
 .filtre-item i{
     padding: 1rem;
+    width: 50px;
     line-height: 1rem;
     font-size: 1rem;
     background-color: #DEEBFF;
@@ -172,11 +180,151 @@ header{
 .fa-info{
     color: #0065FC;
     border: 1px solid #f2f2f2;
+    width: 30px;
     border-radius: 50%;
     line-height: 10px;
     padding: 10px;
     font-size: 10px;
     margin-right: 10px;
+    text-align: center;
+}
+
+/*PARTIE HEBERGEMENT */
+.hebergement-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    margin-bottom: 25px
+}
+.main{
+    width: 60%;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 30px;
+    margin-right: 3%;
+}
+
+.main__title, .main__more{
+    padding-left: 15px;
+}
+
+.location-items__inner{
+    background-color: #f2f2f2;
+    display: flex;
+    flex-wrap: wrap;
+}
+.location-item{
+    width: 33.33%;
+    padding: 15px;
+}
+.location-item-inner{
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    border-radius: 20px;
+    border: 5px solid white;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(88, 88, 88, 0.2);
+}
+.location-description{
+    background-color: white;
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.location-description .location-title{
+    font-weight: 600;
+}
+.location-description p {
+    font-size: 0.9rem;
+}
+.location-item span{
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.fa-star{
+    color:#0065FC;
+    font-size: 0.8rem;
+}
+.fa-star.grey{
+    color:#f2f2f2;
+}
+.location-image{
+    width: 100%;
+    height: 60%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+ 
+
+.aside{
+    width: 37%;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 30px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.aside-location-items{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.aside-location-item{
+    width: 100%;
+    padding: 15px;
+    height: 160px;
+}
+
+.aside-location-item__inner{
+    border: 5px solid white;
+    background-color: white ;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    box-shadow: 0px 0px 5px rgba(88, 88, 88, 0.2);
+}
+
+.aside-location-image img{
+    height: 100%;
+    width: 35%;
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0;
+    object-fit: cover;
+}
+
+.aside-location-description{
+    background-color: white;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px 10px;
+    width: 65%;
 }
 
 /*PARTIE FOOTER */
@@ -200,7 +348,7 @@ footer{
     font-size: 0.9rem;
 }
 
-@media screen and (max-width: 450px){
+@media screen and (max-width: 550px){
     .filtre-title{
         margin-right: 300px;
         margin-bottom: 15px;
@@ -221,4 +369,102 @@ footer{
     }
     .search-inner .search-btn{
         display: none;
+    }
+    header{
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    .header-logo{
+        width: 50%;
+        padding-left: 5%;
+    }
+    
+    .menu__item{
+        border-bottom: 3px solid #F2F2F2;
+        border-top: none;
+        width: 50%;
+    }
+    .header__container h3{
+        color:#0065FC;
+    }
+    .menu__item a{
+        display: block;
+        color: black;
+    }
+    .menu__item:hover {
+        border-top: none;
+        border-bottom: 3px solid #0065FC;
+        color:#0065FC;
+    }
+    .menu__item:hover a{
+        color:#0065FC;
+    }
+    .header-logo{
+        order: 1;
+    }
+    .menu__item.item-hbg{
+        padding-left: 0;
+        padding-right: 0;
+        order: 3;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .menu__item.item-act{
+        padding-left: 0;
+        padding-right: 0;
+        order: 4;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .menu__item.item-inscription{
+        order: 2;
+        text-align: end;
+        border-bottom: none;
+        padding-right: 5%;
+        
+    }
+    .section__hebergement{
+        padding: 0;
+    }
+    .main{
+        width: 100%;
+        order: 2;
+        margin-right: 0%;
+        background-color: white;
+        
+    }
+    .aside{
+        width: 100%;
+        order: 1;
+        border-radius: 0;
+    }
+    .location-items__inner{
+        background-color: white; 
+    }
+    .location-item{
+        width: 100%;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    .main__title{
+        padding-left: 0;
+        margin-bottom: 20px;
+        font-size: 1.4rem;
+    }
+    .main__more{
+        padding-left: 0;
+        font-size: 1.2rem;
+    }
+    .row{
+        padding: 0;
+    }
+    .row h1, .row i{
+       font-size: 1.4rem;
+    }
+    .aside-location-item{
+        padding:0;
+        margin-top: 20px;
+        height: 150px;
+    }
+
 }
